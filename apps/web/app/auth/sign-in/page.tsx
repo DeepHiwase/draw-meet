@@ -3,6 +3,7 @@
 import { FormEvent, useState } from "react";
 import axios from "axios";
 import { useRouter } from "next/navigation";
+import { Button } from "@repo/ui/button";
 
 export default function SignIn() {
   const [email, setEmail] = useState<string>("");
@@ -63,12 +64,12 @@ export default function SignIn() {
         />
       </label>
 
-      <button
+      <Button
         type="submit"
         className="border-2 py-2 px-3.5 rounded-md mt-4 bg-green-400 hover:bg-green-600 active:bg-green-600 hover:text-green-300 hover:border-green-500 transition-all duration-150"
       >
-        Sign Up
-      </button>
+        Sign In
+      </Button>
     </form>
   );
 }

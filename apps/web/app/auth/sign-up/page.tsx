@@ -3,6 +3,7 @@
 import { FormEvent, useState } from "react";
 import axios from "axios";
 import { useRouter } from "next/navigation";
+import { Button } from "@repo/ui/button";
 
 export default function SignUp() {
   const [email, setEmail] = useState<string>("");
@@ -23,7 +24,7 @@ export default function SignUp() {
     const { data } = await axios.post(
       "http://localhost:4004/api/v1/auth/register",
       newUser
-    );// data from axios is already parsed by axios, not in case of fetch where we need to reponse.json() then get data from response
+    ); // data from axios is already parsed by axios, not in case of fetch where we need to reponse.json() then get data from response
     // if (status !== 201) {
     //   throw new Error("Internal Server Error");
     // }
@@ -92,12 +93,19 @@ export default function SignUp() {
         />
       </label> */}
 
-      <button
+      {/* <button
         type="submit"
         className="border-2 py-2 px-3.5 rounded-md mt-4 bg-green-400 hover:bg-green-600 active:bg-green-600 hover:text-green-300 hover:border-green-500 transition-all duration-150"
       >
         Sign Up
-      </button>
+      </button> */}
+
+      <Button
+        type="submit"
+        className="border-2 py-2 px-3.5 rounded-md mt-4 bg-green-400 hover:bg-green-600 active:bg-green-600 hover:text-green-300 hover:border-green-500 transition-all duration-150"
+      >
+        Sign Up
+      </Button>
     </form>
   );
 }

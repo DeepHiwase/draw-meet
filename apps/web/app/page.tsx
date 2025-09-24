@@ -28,9 +28,9 @@ export default function Home() {
       }
     );
 
-    console.log(data);
-    console.log(data.roomId);
-    console.log(typeof data.roomId);
+    // console.log(data);
+    // console.log(data.roomId);
+    // console.log(typeof data.roomId);
 
     router.push(`/room/${JSON.stringify(data.roomId)}`);
   };
